@@ -3,7 +3,7 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "Build and run",
+      "label": "start",
       "command": "npm start",
       "isBackground": true,
       "problemMatcher": [
@@ -18,7 +18,30 @@
           ],
           "background": {
             "activeOnStart": true,
-            "beginsPattern": ".",
+            "beginsPattern": "$ npx nwts-run",
+            "endsPattern": ".",
+          }
+        }
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "dev-hmr",
+      "command": "npm run dev-hmr",
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "$ npx nwts-run",
             "endsPattern": ".",
           }
         }

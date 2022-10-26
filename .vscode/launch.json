@@ -2,12 +2,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Program",
+      "name": "Build & Launch Program",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}/build",
+      "preLaunchTask": "start",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "Launch Program with HMR",
       "port": 9222,
       "request": "attach",
       "type": "chrome",
       "webRoot": "${workspaceFolder}",
-      "preLaunchTask": "Build and run",
+      "preLaunchTask": "dev-hmr",
       "internalConsoleOptions": "openOnSessionStart"
     },
     {
