@@ -3,10 +3,12 @@ import "../nwts.env.js";
 import fs from "fs";
 import {proper_spawn} from "nwts-tools/dist/lib/proper-spawn.js";
 
-await proper_spawn(`npx vite build --minify false`);
+process.env.DEBUG = "true";
+
+await proper_spawn(`npx vite build --mode development --minify false`);
 
 const args = JSON.parse(await fs.promises.readFile(
-               "public/package.json"))["chromium-args"]
+               `${process.env.BUILD_DIRECTORY}/package.json`))["chromium-args"]
              || "";
 
 await proper_spawn(
