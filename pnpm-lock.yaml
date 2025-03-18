@@ -21,8 +21,8 @@ importers:
         specifier: 0.65.1-sdk
         version: 0.65.1-sdk
       nwts-tools:
-        specifier: ^0.5.2
-        version: 0.5.2(nw@0.65.1-sdk)
+        specifier: ^0.5.3
+        version: 0.5.3(nw@0.65.1-sdk)
       solid-js:
         specifier: ^1.5.1
         version: 1.9.5
@@ -809,8 +809,8 @@ packages:
     resolution: {integrity: sha512-6EGHTslenOVavqMuJLNcddXizjMnXmzydmaF8D9OHnXx66D1YlGYTslo3amA5si/zsZcQGxVXFFJ80ui1GLsJw==}
     hasBin: true
 
-  nwts-tools@0.5.2:
-    resolution: {integrity: sha512-qkV/EKIdMWoYYPGC0RPt3V3Z8Q36hfzIQdJ2vIpEXeXD87My5YKnaWvjmN6kgf/DGAltLxIvgZR5uo41ZZ3RQw==}
+  nwts-tools@0.5.3:
+    resolution: {integrity: sha512-rquUGRcHk2CzDsDmwP8TXwLJ1XpULV2efTBt1aJw2sq79PrDZfrtD4ZCrNRNQh0C1ANUOj7EMGwX7ow72tsIlg==}
     engines: {node: '>=13.2'}
     hasBin: true
     peerDependencies:
@@ -1931,7 +1931,7 @@ snapshots:
       got: 10.7.0
       yazl: 2.5.1
 
-  nwts-tools@0.5.2(nw@0.65.1-sdk):
+  nwts-tools@0.5.3(nw@0.65.1-sdk):
     dependencies:
       got: 12.6.1
       nw: 0.65.1-sdk
