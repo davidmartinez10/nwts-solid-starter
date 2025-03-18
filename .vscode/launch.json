@@ -8,6 +8,7 @@
       "type": "chrome",
       "webRoot": "${workspaceFolder}/build",
       "preLaunchTask": "start",
+      "postDebugTask": "kill",
       "internalConsoleOptions": "openOnSessionStart"
     },
     {
@@ -17,6 +18,7 @@
       "type": "chrome",
       "webRoot": "${workspaceFolder}",
       "preLaunchTask": "dev-hmr",
+      "postDebugTask": "kill-hmr",
       "internalConsoleOptions": "openOnSessionStart"
     },
     {

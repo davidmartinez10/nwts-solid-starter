@@ -3,6 +3,7 @@ node_modules/
 build
 dist
 public/package.json
+public/package-lock.json
 .vscode/*
 !.vscode/extensions.json
 !.vscode/launch.json

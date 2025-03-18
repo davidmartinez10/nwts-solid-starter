@@ -6,26 +6,34 @@
   "type": "module",
   "description": "NW.js starter template with Typescript, Solid.js and NW.ts-Tools. It works with the VSCode debugger out-of-the-box.",
   "scripts": {
-    "postinstall": "node node_modules/nwts-tools/patch-zx.js",
-    "start": "zx scripts/dev-build.mjs",
-    "dev-hmr": "zx scripts/dev-hmr.mjs",
-    "clean": "zx scripts/clean.mjs",
-    "typecheck": "tsc --noEmit",
-    "build": "zx scripts/build.mjs",
-    "compile-to-bin": "zx scripts/compile.mjs",
-    "package": "zx scripts/package.mjs"
+    "build": "node scripts/build.js",
+    "clean": "node scripts/clean.js",
+    "compile": "node scripts/compile.js",
+    "start": "node scripts/dev-build.js",
+    "dev-hmr": "node scripts/dev-hmr.js",
+    "make": "node scripts/make.js",
+    "package": "node scripts/package.js",
+    "patch-codecs": "nwts-patch-codecs"
   },
   "license": "MIT",
   "dependencies": {
     "@types/chrome": "^0.0.197",
-    "@types/node": "^18.11.0",
-    "@types/nw.js": "^0.13.16",
+    "@types/node": "^18.19.80",
+    "@types/nw.js": "^0.13.21",
     "nw": "0.65.1-sdk",
-    "nwts-tools": "^0.3.5",
+    "nwts-tools": "^0.5.2",
     "solid-js": "^1.5.1",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
     "vite-plugin-solid": "^2.3.0",
     "zx": "^7.1.1"
+  },
+  "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "nw",
+      "nwts-tools"
+    ]
   }
 }
