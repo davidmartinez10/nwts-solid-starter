@@ -2,50 +2,54 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "shell",
-      "label": "start",
-      "command": "npm start",
+      "label": "npm-start",
+      "type": "npm",
+      "script": "start",
       "isBackground": true,
-      "problemMatcher": [
-        {
-          "pattern": [
-            {
-              "regexp": ".*DevTools listening on.*",
-              "file": 1,
-              "location": 2,
-              "message": 3
-            }
-          ],
-          "background": {
-            "activeOnStart": true,
-            "beginsPattern": ".*",
-            "endsPattern": ".*DevTools listening on.*"
-          }
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*$",
+          "endsPattern": "DevTools listening on.*"
         }
-      ]
+      }
     },
     {
+      "label": "start",
+      "dependsOn": ["npm-start"],
+      "dependsOrder": "sequence",
       "type": "shell",
-      "label": "dev-hmr",
-      "command": "npm run dev-hmr",
+      "command": "echo Build complete",
+      "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "dev-hmr",
+      "label": "npm-dev-hmr",
       "isBackground": true,
-      "problemMatcher": [
-        {
-          "pattern": [
-            {
-              "regexp": ".*DevTools listening on.*",
-              "file": 1,
-              "location": 2,
-              "message": 3
-            }
-          ],
-          "background": {
-            "activeOnStart": true,
-            "beginsPattern": ".*",
-            "endsPattern": ".*DevTools listening on.*"
-          }
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*$",
+          "endsPattern": "DevTools listening on.*"
         }
-      ]
+      }
+    },
+    {
+      "label": "dev-hmr",
+      "dependsOn": ["npm-dev-hmr"],
+      "dependsOrder": "sequence",
+      "type": "shell",
+      "command": "echo Build complete",
+      "problemMatcher": []
     },
     {
       "label": "kill",
