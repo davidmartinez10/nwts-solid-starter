@@ -69,13 +69,13 @@
       "id": "terminate",
       "type": "command",
       "command": "workbench.action.tasks.terminate",
-      "args": "start"
+      "args": "npm-start"
     },
     {
       "id": "terminate-hmr",
       "type": "command",
       "command": "workbench.action.tasks.terminate",
-      "args": "dev-hmr"
+      "args": "npm-dev-hmr"
     }
   ]
 }
