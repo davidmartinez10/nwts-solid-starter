@@ -16,23 +16,18 @@
     "patch-codecs": "nwts-patch-codecs"
   },
   "license": "MIT",
-  "dependencies": {
-    "@types/chrome": "^0.0.197",
-    "@types/node": "^18.19.80",
-    "@types/nw.js": "^0.13.21",
-    "nw": "0.65.1-sdk",
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "@types/node": "^26.6.6",
+    "@types/nw.js": "^0.115.0",
+    "nw": "0.120.0-sdk",
     "nwts-tools": "^0.5.3",
-    "solid-js": "^1.5.1",
-    "typescript": "^4.8.2",
-    "vite": "^3.0.9",
-    "vite-plugin-solid": "^2.3.0"
+    "solid-devtools": "^0.34.3",
+    "typescript": "^5.7.2",
+    "vite": "^7.1.4",
+    "vite-plugin-solid": "^2.11.8"
   },
-  "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "nw",
-      "nwts-tools"
-    ]
+  "dependencies": {
+    "solid-js": "^1.9.5"
   }
 }

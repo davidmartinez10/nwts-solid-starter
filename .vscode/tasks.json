@@ -14,7 +14,7 @@
         "background": {
           "activeOnStart": true,
           "beginsPattern": "^.*$",
-          "endsPattern": "DevTools listening on.*"
+          "endsPattern": "npx nw.*"
         }
       }
     },

@@ -3,7 +3,7 @@ import {NWJSManifest} from "nwts-tools/lib/types/nwjs_manifest";
 import package_json from "./package.json";
 
 let { name, displayName } = package_json;
-if (! displayName) { displayName = name; }
+if (! displayName) displayName = name;
 
 export const manifest: NWJSManifest = {
   name: displayName,
@@ -16,5 +16,5 @@ export const manifest: NWJSManifest = {
     height: 500,
     position: "center",
   },
-  "node-remote": ["<all_urls>"]
+  "node-remote": ["<all_urls>"],
 };

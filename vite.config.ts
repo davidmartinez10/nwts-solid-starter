@@ -38,4 +38,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {output: {format: "umd"}}
   },
+  resolve: {
+    // Ensures standard browser/import conditions are checked properly
+    conditions: ["browser", "development", "module", "import"],
+  },
 });

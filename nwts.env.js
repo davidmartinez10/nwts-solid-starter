@@ -6,8 +6,7 @@ let {
   PACKAGE_DIRECTORY = "dist",
   PACKAGE_TYPE      = "plain",
   NWJS_FFMPEG       = "PATCH",
-}
-= process.env;
+} = process.env;
 
 Object.assign(process.env, {
   NODE_ENV,
@@ -16,5 +15,5 @@ Object.assign(process.env, {
   BUILD_DIRECTORY,
   PACKAGE_DIRECTORY,
   PACKAGE_TYPE,
-  NWJS_FFMPEG
+  NWJS_FFMPEG,
 });
